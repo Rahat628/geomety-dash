@@ -8,21 +8,141 @@
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- tailwind css customization -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'base-color': '#414141'
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
+    <style>
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="font-inter mx-12">
+    <header class="bg-sky-100 flex justify-between items-center px-10 mt-3">
+        <h2 class="text-5xl font-bold">Interactive <br><span class="text-[#11111199] text-3xl font-medium">Geometry
+                Genius</span></h2>
+        <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Blog</button>
+    </header>
+    <main class="mt-12 grid grid-cols-3 gap-6">
+        <!-- card 1 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/triangle.png" alt="triangle" /></figure>
+            <div class=" card-body text-center">
+                <h2 class="text-2xl font-bold">Triangle</h2>
+                <p class="text-base font-normal">Area (A) =0.5 X b X h</p>
+                <div>
+                    <input type="number" name="" id="triangle-base" placeholder="b"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span class="font-base font-normal">cm</span>
+                    <input type="number" name="" id="triangle-height" placeholder="h"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span>cm</span>
+                </div>
+                <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Calculate</button>
+            </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/rectangle.png" alt="Rectangle" /></figure>
+            <div class=" card-body text-center">
+                <h2 class="text-2xl font-bold">Rectangle</h2>
+                <p class="text-base font-normal">Area (A) = w X I</p>
+                <div>
+                    <input type="number" name="" id="rectangle-width" placeholder="w"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span class="font-base font-normal">cm</span>
+                    <input type="number" name="" id="rectangle-height" placeholder="l"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span>cm</span>
+                </div>
+                <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Calculate</button>
+            </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/parallelogram.png" alt="parallelogram" /></figure>
+            <div class=" card-body text-center">
+                <h2 class="text-2xl font-bold">Parallelogram</h2>
+                <p class="text-base font-normal">Area (A) = b X h</p>
+                <div>
+                    <input type="number" name="" id="parallelogram-base" placeholder="b"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span class="font-base font-normal">cm</span>
+                    <input type="number" name="" id="parallelogram-height" placeholder="h"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span>cm</span>
+                </div>
+                <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Calculate</button>
+            </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/rhombus.png" alt="Rhombus" /></figure>
+            <div class=" card-body text-center">
+                <h2 class="text-2xl font-bold">Rhombus</h2>
+                <p class="text-base font-normal">Area (A) =0.5 X d<sub>1</sub>X d<sub>2</sub></p>
+                <div>
+                    <input type="number" name="" id="major-diameter" placeholder="d1"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span class="font-base font-normal">cm</span>
+                    <input type="number" name="" id="minor-diameter" placeholder="d2"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span>cm</span>
+                </div>
+                <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Calculate</button>
+            </div>
+        </div>
+        <!-- card 5 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/pentagon.png" alt="Pentagon" /></figure>
+            <div class=" card-body text-center">
+                <h2 class="text-2xl font-bold">Pentagon</h2>
+                <p class="text-base font-normal">Area (A) = 0.5 X p X a</p>
+                <div>
+                    <input type="number" name="" id="pentagon-perimeter" placeholder="p"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span class="font-base font-normal">cm</span>
+                    <input type="number" name="" id="pentagon-apothem" placeholder="a"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span>cm</span>
+                </div>
+                <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Calculate</button>
+            </div>
+        </div>
+        <!-- card 6 -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/ellipse.png" alt="ellipse" /></figure>
+            <div class=" card-body text-center">
+                <h2 class="text-2xl font-bold">Ellipse</h2>
+                <p class="text-base font-normal">Area (A) =<span class="font-medium">&#960;</span>ab</p>
+                <div>
+                    <input type="number" name="" id="ellipse-semi-major" placeholder="a"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span class="font-base font-normal">cm</span>
+                    <input type="number" name="" id="ellipse-semi-minor" placeholder="b"
+                        class="w-24 bg-[#F1F1F1] font-normal pl-2">
+                    <span>cm</span>
+                </div>
+                <button class="btn btn-active bg-[#1090D8] text-white py-2 px-9">Calculate</button>
+            </div>
+        </div>
+    </main>
 
 
 </body>
